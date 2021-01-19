@@ -1,13 +1,22 @@
-#ifndef BLOCKCHAIN_H
-#define BLOCKCHAIN_H
-
+#pragma once
 #include <QObject>
+#include "Block.h"
 
-class BlockChain
+namespace SBC
 {
-    Q_OBJECT
-public:
-    BlockChain();
-};
+    class Block;
 
-#endif // BLOCKCHAIN_H
+    class BlockChain : public QObject
+    {
+        Q_OBJECT
+    public:
+        BlockChain(int pDifficulty, int pMiningReward);
+        explicit BlockChain(QObject *parent=0);
+
+        void addGenesisBlock();
+        Block* getLatestBlock();
+    };
+}
+
+
+

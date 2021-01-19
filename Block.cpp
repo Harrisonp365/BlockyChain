@@ -1,7 +1,8 @@
 #include "Block.h"
 #include <iostream>
 
-namespace SBC{
+namespace SBC
+{
 
     Block::Block(qint64 pTimestamp, QByteArray pPreviousHash) :
         timestamp(pTimestamp),
