@@ -15,6 +15,29 @@ namespace SBC
 
         void addGenesisBlock();
         Block* getLatestBlock();
+
+        bool isChainValid();
+
+        int getDifficulty() const;
+        void setDifficulty(int value);
+
+        int getMiningReward() const;
+        void setMiningReward(int value);
+
+        void minePendingTransactions(const QString & miningRewardAddress);
+        void addToPendingTransaction(Transaction* tx);
+        double getBalanceOfAddress(const QString & address);
+
+        std::vector<Block*> chain;
+        std::vector<Transaction*> pendingTransactions;
+
+    private:
+        int mDifficulty;
+        int mMiningReward;
+
+        explicit BlockChain(const BlockChain& rhs) = delete;
+
+        BlockChain& operator = (const BlockChain& rhs) = delete;
     };
 }
 

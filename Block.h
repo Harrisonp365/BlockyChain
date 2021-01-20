@@ -48,9 +48,10 @@ class Transaction;
         QByteArray BlockMerkleRoot(bool* mutated);
 
     private:
-        qint64 timestamp;
-        QByteArray previousHash;
-        QByteArray hash;
+        qint64 mTimestamp;
+        QByteArray mPreviousHash;
+        QByteArray mHash;
+        uint mNonce;
 
         explicit Block(const Block& rhs) = delete;
         Block& operator= (const Block& rhs) = delete;

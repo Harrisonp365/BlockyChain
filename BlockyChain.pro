@@ -7,7 +7,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     Block.cpp \
-    Blockchain.cpp
+    Blockchain.cpp \
+    JSON.cpp \
+    Main.cpp \
+    Transaction.cpp
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -16,4 +19,5 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     Block.h \
-    Blockchain.h
+    Blockchain.h \
+    Transaction.h
