@@ -21,3 +21,11 @@ HEADERS += \
     Block.h \
     Blockchain.h \
     Transaction.h
+
+DISTFILES += \
+    README.md \
+    V2_Images/afterGenesisBlock.jpg \
+    V2_Images/binaryFile.jpg \
+    V2_Images/jsonFormattedChain.jpg \
+    V2_Images/settingUpMiner.jpg \
+    V2_Images/validationOfChain.jpg
