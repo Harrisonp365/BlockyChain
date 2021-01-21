@@ -15,6 +15,8 @@ If the code or the block is modified in any way when there is already a current 
 The chain will be shown to the user in the console, but it will also provide a .json file with the current chain in correct Json formatting, along with a binary file with the same data. When booting up the application you have the ability to fetch the current chain or start a new one. If a new one is started I would recommend deleting the old json files just to be sure. 
 These files are called: “/BlockyChainJson.json” & "/BlockyChainBinary.json". Be sure to have a look at both of these files if you want to see everything. It's also a bit easier to read than the console output. 
 
+I will include images below of myself setting up the miners, the chain, the validation and also the Json outputs. 
+
 ![Setting up the Miner](V2_Images/settingUpMiner.jpg)
 ![First Block](V2_Images/afterGenesisBlock.jpg)
 ![Validation of the chain](V2_Images/validationOfChain.jpg)
