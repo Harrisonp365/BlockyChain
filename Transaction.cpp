@@ -77,6 +77,5 @@ namespace SBC
     {
         mHash = value;
     }
-
 }
 

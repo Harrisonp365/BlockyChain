@@ -47,7 +47,7 @@ namespace SBC
         pendingTransactions.push_back(tx);
     }
 
-    void BlockChain::addToPendingTransaction(Transaction *tx)
+    void BlockChain::addToPendingTransactions(Transaction *tx)
     {
         pendingTransactions.push_back(tx);
     }
@@ -75,8 +75,8 @@ namespace SBC
         if(chain.size() > 0)
             return;
 
-        std::vector<Transactions*> txs;
-        txs.push_back(new Transaction("xManFrom", "xManTo", 10000.0));
+        std::vector<Transaction*> txs;
+        txs.push_back(new Transaction("FromGenesisBlock", "HarryAddress", 10000.0));
 
         Block* genesisBlock = new Block(Block::getGensisBlockTimestamp(), txs);
         genesisBlock->setHash(Block::getGenesisHash());

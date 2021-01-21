@@ -25,7 +25,7 @@ namespace SBC
         void setMiningReward(int value);
 
         void minePendingTransactions(const QString & miningRewardAddress);
-        void addToPendingTransaction(Transaction* tx);
+        void addToPendingTransactions(Transaction* tx);
         double getBalanceOfAddress(const QString & address);
 
         std::vector<Block*> chain;

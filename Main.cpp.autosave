@@ -252,7 +252,7 @@ int initMain()
         std::cout << "Mining Block 1..." << std::endl;
 
         Transaction* tx1 = new Transaction("fromAddress", "toAddress", 30.0);
-        Transaction* tx2 = new Transaction("HarryAddress", "LeeAddress", 100);;
+        Transaction* tx2 = new Transaction("HarryAddress", "LeeAddress", 100);
 
         hCoin->addToPendingTransactions(tx1);
         hCoin->addToPendingTransactions(tx2);

@@ -1,12 +1,9 @@
-#ifndef BLOCK_H
-#define BLOCK_H
-
 #pragma once
 #include <QObject>
 #include <QtCore>
 #include <QCryptographicHash>
 #include <QDebug>
-//#include "transaction.h"
+#include "Transaction.h"
 
 namespace SBC
 {
@@ -58,5 +55,3 @@ class Transaction;
     };
 
 }
-
-#endif // BLOCK_H
