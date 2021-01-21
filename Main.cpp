@@ -43,18 +43,18 @@ void chainToJson(BlockChain* hCoin)
 
     // save JSON to disk
 
-    auto BlockyChainToJsonFilePath = QDir::currentPath() + "/BlockyChainToJson.json";
-    QFile BlockyChainToJsonfile(BlockyChainToJsonFilePath);
-    if(!BlockyChainToJsonfile.open(QIODevice::WriteOnly | QIODevice::Text))
+    auto BlockyChainToJsonFilePath = QDir::currentPath() + "/BlockyChainJson.json";
+    QFile BlockyChainJsonfile(BlockyChainToJsonFilePath);
+    if(!BlockyChainJsonfile.open(QIODevice::WriteOnly | QIODevice::Text))
         return;
 
     //empty old file if already exists
-    BlockyChainToJsonfile.resize(0);
-    BlockyChainToJsonfile.write(QJsonDocument(objRoot).toJson(QJsonDocument::Indented));
+    BlockyChainJsonfile.resize(0);
+    BlockyChainJsonfile.write(QJsonDocument(objRoot).toJson(QJsonDocument::Indented));
     std::cout << "\nBlockyChainToJson path is:" + BlockyChainToJsonFilePath.toStdString() << std::endl;
 
-    BlockyChainToJsonfile.flush();
-    BlockyChainToJsonfile.close();
+    BlockyChainJsonfile.flush();
+    BlockyChainJsonfile.close();
 }
 
 void chainToStream(QDataStream& out, BlockChain* hCoin)
@@ -252,7 +252,7 @@ int initMain()
         std::cout << "Mining Block 1..." << std::endl;
 
         Transaction* tx1 = new Transaction("fromAddress", "toAddress", 30.0);
-        Transaction* tx2 = new Transaction("HarryAddress", "LeeAddress", 100);;
+        Transaction* tx2 = new Transaction("HarryAddress", "LeeAddress", 100);
 
         hCoin->addToPendingTransactions(tx1);
         hCoin->addToPendingTransactions(tx2);
